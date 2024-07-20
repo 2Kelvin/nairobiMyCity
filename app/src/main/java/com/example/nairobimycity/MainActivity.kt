@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.nairobimycity.ui.reusables.HomeTopAppBar
 import com.example.nairobimycity.ui.theme.NairobiMyCityTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,7 +20,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NairobiMyCityTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    topBar = { HomeTopAppBar() }
+                ) { innerPadding ->
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
@@ -28,12 +32,6 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-}
-
-// top app bar
-@Composable
-fun HomeTopAppBar() {
-//    CenterAlignedTopAppBar(title = { /*TODO*/ })
 }
 
 @Composable
@@ -48,6 +46,14 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     NairobiMyCityTheme {
-        Greeting("Android")
+        Scaffold(
+            modifier = Modifier.fillMaxSize(),
+            topBar = { HomeTopAppBar() }
+        ) { innerPadding ->
+            Greeting(
+                name = "Android",
+                modifier = Modifier.padding(innerPadding)
+            )
+        }
     }
 }

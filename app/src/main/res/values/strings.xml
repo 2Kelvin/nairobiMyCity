@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Nairobi My City</string>
+    <string name="category_one">Category 1</string>
+    <string name="category_two">Category 2</string>
+    <string name="category_three">Category 3</string>
+    <string name="category_four">Category 4</string>
+    <string name="category_five">Category 5</string>
+
+    <string name="recommendation_one">Recommendation 1</string>
+    <string name="recommendation_two">Recommendation 2</string>
+    <string name="recommendation_three">Recommendation 3</string>
+    <string name="recommendation_four">Recommendation 4</string>
+    <string name="recommendation_five">Recommendation 5</string>
+    <string name="category_description">
+        The quick brown fox jumped over the lazy dog.
+    </string>
 </resources>
